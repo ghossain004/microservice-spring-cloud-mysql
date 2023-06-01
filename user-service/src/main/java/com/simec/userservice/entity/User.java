@@ -27,5 +27,5 @@ public class User {
     private String address;
 
     @Transient
-    private List<Ratings> ratings = new ArrayList<>();
+    private List<Rating> ratings = new ArrayList<>();
 }

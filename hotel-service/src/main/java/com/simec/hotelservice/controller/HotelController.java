@@ -31,6 +31,7 @@ public class HotelController {
         return ResponseEntity.ok(service.getAllHotel());
     }
 
+
 //    @PutMapping
 
 

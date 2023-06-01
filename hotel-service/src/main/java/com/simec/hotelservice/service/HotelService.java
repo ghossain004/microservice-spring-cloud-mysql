@@ -14,4 +14,5 @@ public interface HotelService {
 
     //get single
     Hotel getById(Long hotelId);
+
 }

@@ -13,7 +13,7 @@ spring:
     show-sql: true
 
   application:
-    name: user-service
+    name: USER-SERVICE
 
 eureka:
   instance:

@@ -30,4 +30,5 @@ public class HotelServiceImpl implements HotelService {
     public Hotel getById(Long hotelId) {
         return repository.findById(hotelId).orElseThrow(() -> new ResourceNotFoundException("Hotel with this id not found : " + hotelId));
     }
+
 }
