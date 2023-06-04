@@ -14,6 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -36,9 +37,36 @@ public class UserServiceImpl implements UserService {
         return repository.save(user);
     }
 
+    //get allUser list without ratings
     @Override
     public List<User> getAllUser() {
         return repository.findAll();
+    }
+
+    //get allUser list with ratings
+    @Override
+    public List<User> getAllUsers() {
+        List<User> userList = repository.findAll();
+
+        for (User user : userList) {
+            List<Rating> ratings = getRatingsForUser(user.getUserId());
+            user.setRatings(ratings);
+        }
+
+        return userList;
+    }
+
+    //custom method for getUserRating
+    private List<Rating> getRatingsForUser(Long userId) {
+        Rating[] ratingsOfUser = template.getForObject("http://RATING-SERVICE/api/ratings/user/" + userId, Rating[].class);
+        List<Rating> ratings = Arrays.asList(ratingsOfUser);
+
+        for (Rating rating : ratings) {
+            Hotel hotel = hotelService.getHotel(rating.getHotelId());
+            rating.setHotel(hotel);
+        }
+
+        return ratings;
     }
 
     @Override

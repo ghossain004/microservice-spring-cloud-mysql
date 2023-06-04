@@ -31,4 +31,10 @@ public class RatingController {
         return ResponseEntity.ok(service.getAllByHotelId(hotelId));
     }
 
+    @GetMapping("/getAll")
+    public ResponseEntity<List<Rating>> getAllRatings(){
+        List<Rating> rating = service.getAllRating();
+        return ResponseEntity.ok(rating);
+    }
+
 }

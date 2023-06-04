@@ -10,6 +10,7 @@ public interface UserService {
 
     //for get all user
     List<User> getAllUser();
+    List<User> getAllUsers();
 
     // for get single user
     User getUser(Long userId);
