@@ -22,6 +22,11 @@ spring:
           predicates:
             - Path=/api/ratings/**
 
+        - id: SECURITY-SERVICE
+          uri: lb://SECURITY-SERVICE
+          predicates:
+            - Path=/api/security/**
+
 
 eureka:
   instance:
