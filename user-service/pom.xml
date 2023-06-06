@@ -92,6 +92,19 @@
 <!--			<artifactId>okta-spring-boot-starter</artifactId>-->
 <!--			<version>3.0.4</version>-->
 <!--		</dependency>-->
+<!--		&lt;!&ndash; https://mvnrepository.com/artifact/org.axonframework/axon-server-connector &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>org.axonframework</groupId>-->
+<!--			<artifactId>axon-server-connector</artifactId>-->
+<!--			<version>4.7.5</version>-->
+<!--		</dependency>-->
+<!--		&lt;!&ndash; https://mvnrepository.com/artifact/com.google.guava/guava &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>com.google.guava</groupId>-->
+<!--			<artifactId>guava</artifactId>-->
+<!--			<version>32.0.0-jre</version>-->
+<!--		</dependency>-->
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>

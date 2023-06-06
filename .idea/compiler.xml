@@ -9,8 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="rating-service" />
         <module name="config-server" />
+        <module name="axon-cqrs-microservices" />
+        <module name="axon-service" />
         <module name="security-service" />
         <module name="api-gateway" />
+        <module name="backend" />
         <module name="user-service" />
         <module name="service-registry" />
         <module name="hotel-service" />
@@ -20,6 +23,9 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
+      <module name="axon-cqrs-microservices" options="-parameters" />
+      <module name="axon-service" options="-parameters" />
+      <module name="backend" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="hotel-service" options="-parameters" />
       <module name="rating-service" options="-parameters" />
