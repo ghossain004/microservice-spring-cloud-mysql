@@ -12,12 +12,12 @@
         <option value="$PROJECT_DIR$/api-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/security-service/pom.xml" />
         <option value="$PROJECT_DIR$/../axon-cqrs-microservices/pom.xml" />
-        <option value="$PROJECT_DIR$/../bite-plan/meal_back_end/pom.xml" />
         <option value="$USER_HOME$/Downloads/axon-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../bite-plan/meal_back_end/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

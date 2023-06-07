@@ -77,7 +77,7 @@ public class UserServiceImpl implements UserService {
         Rating[] ratingsOfUser = template.getForObject("http://RATING-SERVICE/api/ratings/user/" + user.getUserId(), Rating[].class);
         logger.info("{} ", ratingsOfUser);
 
-        List<Rating> ratings = Arrays.stream(ratingsOfUser).toList();
+        List<Rating> ratings = Arrays.stream(ratingsOfUser).collect(Collectors.toList());
         List<Rating> ratingList =  ratings.stream().map(rating -> {
 //            ResponseEntity<Hotel> forEntity = template.getForEntity("http://HOTEL-SERVICE/api/hotel/get/" + rating.getHotelId(), Hotel.class);
 //            Hotel hotel = forEntity.getBody();
